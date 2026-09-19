@@ -77,6 +77,31 @@
     }
   } catch (e) {}
 
+
+  // Soft light that follows the cursor (fine pointers only, off for reduced motion).
+  try {
+    var fine = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (fine && !calm) {
+      var glow = document.createElement('div');
+      glow.className = 'cursor-glow';
+      glow.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(glow);
+      var tx = 0, ty = 0, cx = 0, cy = 0, run = false;
+      var loop = function () {
+        cx += (tx - cx) * 0.11; cy += (ty - cy) * 0.11;
+        glow.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0)';
+        if (Math.abs(tx - cx) > 0.3 || Math.abs(ty - cy) > 0.3) { requestAnimationFrame(loop); } else { run = false; }
+      };
+      window.addEventListener('mousemove', function (e) {
+        tx = e.clientX; ty = e.clientY;
+        if (!glow.classList.contains('on')) { cx = tx; cy = ty; glow.classList.add('on'); }
+        if (!run) { run = true; requestAnimationFrame(loop); }
+      }, { passive: true });
+      document.documentElement.addEventListener('mouseleave', function () { glow.classList.remove('on'); });
+    }
+  } catch (e) {}
+
   var els = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
     els.forEach(function (e) { e.classList.add('in'); });
