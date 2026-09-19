@@ -78,27 +78,33 @@
   } catch (e) {}
 
 
-  // Soft light that follows the cursor (fine pointers only, off for reduced motion).
+  // Trailing ring cursor (fine pointers only, off for reduced motion). The native cursor stays.
   try {
     var fine = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (fine && !calm) {
-      var glow = document.createElement('div');
-      glow.className = 'cursor-glow';
-      glow.setAttribute('aria-hidden', 'true');
-      document.body.appendChild(glow);
+      var ring = document.createElement('div');
+      ring.className = 'cursor-ring';
+      ring.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(ring);
       var tx = 0, ty = 0, cx = 0, cy = 0, run = false;
       var loop = function () {
-        cx += (tx - cx) * 0.11; cy += (ty - cy) * 0.11;
-        glow.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0)';
+        cx += (tx - cx) * 0.2; cy += (ty - cy) * 0.2;
+        ring.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0)';
         if (Math.abs(tx - cx) > 0.3 || Math.abs(ty - cy) > 0.3) { requestAnimationFrame(loop); } else { run = false; }
       };
       window.addEventListener('mousemove', function (e) {
         tx = e.clientX; ty = e.clientY;
-        if (!glow.classList.contains('on')) { cx = tx; cy = ty; glow.classList.add('on'); }
+        if (!ring.classList.contains('on')) { cx = tx; cy = ty; ring.classList.add('on'); }
         if (!run) { run = true; requestAnimationFrame(loop); }
       }, { passive: true });
-      document.documentElement.addEventListener('mouseleave', function () { glow.classList.remove('on'); });
+      document.addEventListener('mouseover', function (e) {
+        var hot = e.target.closest && e.target.closest('a, button, .card, .btn, summary, input, textarea, label');
+        ring.classList.toggle('hot', !!hot);
+      });
+      document.addEventListener('mousedown', function () { ring.classList.add('down'); });
+      document.addEventListener('mouseup', function () { ring.classList.remove('down'); });
+      document.documentElement.addEventListener('mouseleave', function () { ring.classList.remove('on'); });
     }
   } catch (e) {}
 
