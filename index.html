@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#060606">
 <title>Jarrett Michael — Designer. Builder. Thinker.</title>
 <meta name="description" content="Designer. Builder. Thinker. Jarrett Michael's home for design work, writing, and the projects he's building.">
 <meta property="og:title" content="Jarrett Michael — Designer. Builder. Thinker.">
@@ -10,57 +11,58 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body class="">
+<body class="home">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
-  <a class="wordmark" href="index.html">Jarrett Michael</a>
+  <a class="wordmark" href="index.html" aria-label="Jarrett Michael, home"><span>Jarrett</span><strong>Michael</strong></a>
   <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
-  <nav id="nav" aria-label="Primary"><a href="index.html" aria-current="page">Home</a><a href="work.html">Work</a><a href="writing.html">Writing</a><a href="about.html">About</a></nav>
+  <nav id="nav" aria-label="Primary"><a href="work.html">Work</a><a href="writing.html">Writing</a><a href="about.html">About</a></nav>
 </header>
+<aside class="social" aria-label="Social links"><a href="https://www.linkedin.com/in/jarrettmichaelofficial" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.83v1.54h.06c.53-1 1.84-2.07 3.79-2.07 4.05 0 4.8 2.66 4.8 6.13V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.59V21h-4V9.75z"/></svg></a><a href="https://instagram.com/jarrettmichaelofficial" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17.3 6a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM16 2H8a6 6 0 0 0-6 6v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6zm4.3 14A4.3 4.3 0 0 1 16 20.3H8A4.3 4.3 0 0 1 3.7 16V8A4.3 4.3 0 0 1 8 3.7h8A4.3 4.3 0 0 1 20.3 8v8z"/></svg></a></aside>
 <main id="main">
 
 <section class="hero">
-  <p class="kicker reveal">Jarrett Michael</p>
-  <h1 class="reveal">Designer.<br>Builder.<br>Thinker.</h1>
-  <p class="lede reveal">I design clear experiences, build things worth making, and think carefully about how we read, believe, and communicate. This is where it all lives.</p>
-  <p class="cta reveal"><a class="btn" href="work.html">See the work</a><a class="btn ghost" href="about.html">About me</a></p>
+  <div class="hero-inner">
+    <h1 class="reveal">Designer<i>.</i><br>Builder<i>.</i><br>Thinker<i>.</i></h1>
+    <p class="quote reveal">Not all those who <em>create</em> are lost.</p>
+  </div>
+  <a class="scroll" href="#pillars" aria-label="Scroll to content"><svg viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2v34M4 28l8 8 8-8" fill="none" stroke="currentColor" stroke-width="1"/></svg></a>
 </section>
 
-<section class="trio">
+<section class="wrap trio" id="pillars">
   <article class="pillar reveal">
-    <p class="num">01</p>
-    <h2>Designer</h2>
+    <p class="num">01</p><h2>Designer</h2>
     <ul class="tags"><li>UX</li><li>Brand</li><li>Experience</li><li>Strategy</li></ul>
     <p>A UX background and a habit of making complicated things feel simple, from research and structure to the details in between.</p>
     <a class="link" href="work.html">Selected work</a>
   </article>
   <article class="pillar reveal">
-    <p class="num">02</p>
-    <h2>Builder</h2>
+    <p class="num">02</p><h2>Builder</h2>
     <ul class="tags"><li>Bridg</li><li>Entrepreneurship</li><li>Consulting</li><li>Making</li></ul>
     <p>From Bridg to museum-style exhibits on the web, I like taking an idea all the way to something people can use.</p>
     <a class="link" href="work.html#projects">Projects</a>
   </article>
   <article class="pillar reveal">
-    <p class="num">03</p>
-    <h2>Thinker</h2>
+    <p class="num">03</p><h2>Thinker</h2>
     <ul class="tags"><li>Meaning</li><li>Philosophy</li><li>Culture</li><li>Leadership</li><li>Art</li><li>Faith</li></ul>
-    <p>Essays, poems, and questions about meaning and culture, and how design, faith, and the ancient world shape how we read.</p>
+    <p>Essays and questions about meaning and culture, and how design, faith, and the ancient world shape the way we read.</p>
     <a class="link" href="writing.html">Writing</a>
   </article>
 </section>
 
-<section class="feature reveal">
-  <p class="kicker">Featured project</p>
-  <h2>Passages</h2>
-  <p>An online museum-style exhibit that sets Ancient Near Eastern texts beside biblical Scripture, room by room, so the connections can speak for themselves.</p>
-  <p><a class="btn" href="https://silly-choux-a1aab6.netlify.app" rel="noopener">Enter the exhibit</a></p>
+<section class="wrap feature reveal">
+  <div>
+    <p class="kicker">Featured project</p>
+    <h2>Passages</h2>
+    <p>An online museum-style exhibit that sets Ancient Near Eastern texts beside biblical Scripture, room by room, so the connections can speak for themselves.</p>
+    <p><a class="btn" href="https://silly-choux-a1aab6.netlify.app" rel="noopener">Enter the exhibit</a></p>
+  </div>
 </section>
 
-<section class="grid-section">
+<section class="wrap grid-section">
   <h2 class="section-title reveal">Explore</h2>
   <div class="cards">
     <a class="card linkcard reveal" href="work.html"><p class="meta">Work</p><h3>Design and projects</h3><p>UX case studies and the things I've built.</p></a>
@@ -71,10 +73,8 @@
 
 </main>
 <footer class="site-footer">
-  <p class="foot-name">Jarrett Michael</p>
-  <p class="foot-tag">Designer. Builder. Thinker.</p>
-  <p class="foot-links"><a href="mailto:hello@example.com">Email</a><span aria-hidden="true">·</span><a href="#">LinkedIn</a><span aria-hidden="true">·</span><a href="#">Instagram</a></p>
-  <p class="foot-small">&copy; <span id="yr">2026</span> Jarrett Michael</p>
+  <p class="foot-links"><a href="mailto:jarrett@bridgconsultingfirm.com">jarrett@bridgconsultingfirm.com</a><span aria-hidden="true">·</span><a href="https://www.linkedin.com/in/jarrettmichaelofficial" rel="noopener">LinkedIn</a><span aria-hidden="true">·</span><a href="https://instagram.com/jarrettmichaelofficial" rel="noopener">Instagram</a></p>
+  <p class="foot-small">&copy; <span id="yr">2026</span> Jarrett Michael. All rights reserved.</p>
 </footer>
 <script src="script.js"></script>
 </body>
