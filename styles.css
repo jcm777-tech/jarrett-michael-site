@@ -104,9 +104,9 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink);border-color:var(--accen
 .contact-links{display:flex;flex-wrap:wrap;gap:10px 28px;margin:0}
 .portrait{grid-column:2;margin:0;position:sticky;top:96px}
 .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;filter:grayscale(1)}
-.portrait figcaption{margin-top:14px;display:flex;flex-direction:column;gap:2px}
-.portrait strong{font-weight:500;color:var(--muted);font-size:1.05rem}
-.portrait span{font-size:.78rem;color:var(--dim);letter-spacing:.04em}
+.portrait figcaption{margin-top:14px;display:flex;flex-direction:column;gap:0}
+.portrait strong{font-weight:500;color:var(--muted);font-size:1.05rem;line-height:1.2}
+.portrait span{font-size:.78rem;color:var(--dim);letter-spacing:.04em;line-height:1.2}
 .prose{max-width:38em}
 .prose p{margin:0 0 1.2em;color:var(--muted)}
 .todo{border-left:2px solid var(--accent);padding-left:16px;color:var(--dim)!important;font-size:.85rem;font-style:italic}
