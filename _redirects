@@ -1,0 +1,4 @@
+# Coming soon: show the holding page at the home address until the full site is ready.
+# Delete this file to make the real index.html live.
+/            /coming-soon.html   200!
+/index.html  /coming-soon.html   200!
