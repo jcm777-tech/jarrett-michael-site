@@ -179,3 +179,20 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink);border-color:var(--accen
   .link:hover{animation:none}
   .scroll{animation:none}.hero::before{display:none}.feature-img::after{animation:none;opacity:.6}.feature-img img{translate:none}
 }
+
+/* process spectrum: endless left-to-right flow */
+.spectrum::after{content:"";position:absolute;left:0;right:0;top:6px;height:2px;border-radius:2px;pointer-events:none;background:linear-gradient(90deg,transparent 0,#c3d4b8 50%,transparent 100%) no-repeat;background-size:20% 100%;background-position:-25% 0;animation:sflow 7s linear infinite}
+.stage .node{animation:snode 7s linear infinite}
+.stage .num{animation:snum 7s linear infinite}
+.stage:nth-child(1) :is(.node,.num){animation-delay:.3s}
+.stage:nth-child(2) :is(.node,.num){animation-delay:1.82s}
+.stage:nth-child(3) :is(.node,.num){animation-delay:3.29s}
+.stage:nth-child(4) :is(.node,.num){animation-delay:4.83s}
+@keyframes sflow{from{background-position:-25% 0}to{background-position:125% 0}}
+@keyframes snode{0%,8%,100%{box-shadow:0 0 0 0 rgba(152,170,140,0);transform:scale(1)}4%{box-shadow:0 0 14px 3px rgba(152,170,140,.55);transform:scale(1.35);opacity:1}}
+@keyframes snum{0%,12%,100%{color:var(--dim)}5%{color:var(--accent)}}
+@media (max-width:520px){
+  .spectrum::after{left:6px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,transparent 0,#c3d4b8 50%,transparent 100%) no-repeat;background-size:100% 20%;background-position:0 -25%;animation-name:sflowy}
+  @keyframes sflowy{from{background-position:0 -25%}to{background-position:0 125%}}
+}
+@media (prefers-reduced-motion:reduce){.spectrum::after,.stage .node,.stage .num{animation:none}.spectrum::after{display:none}}
