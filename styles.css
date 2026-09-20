@@ -99,11 +99,9 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink);border-color:var(--accen
 .bio{display:grid;grid-template-columns:1fr minmax(0,380px);gap:clamp(28px,5vw,64px);align-items:start}
 .bio-text{grid-column:1;border-right:1px solid var(--line);padding-right:clamp(28px,5vw,64px)}
 .bio-text p{color:var(--muted);margin:0 0 1.4em;max-width:36em}
-.bio-text .lead{font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.6;font-weight:300;color:var(--ink)}
-.bio-text .outside{margin-top:2em;padding-top:1.6em;border-top:1px solid var(--line)}
 .bio-text .connect{margin-bottom:0}
-.bio-text a{color:var(--ink);text-decoration:none;background:linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.35)) 0 100%/100% 1px no-repeat;padding-bottom:1px;transition:color .5s ease}
-.bio-text a:hover{color:var(--accent);animation:ul .8s cubic-bezier(.65,0,.35,1)}
+.bio-text .link{font-size:inherit}
+.contact-links{display:flex;flex-wrap:wrap;gap:10px 28px;margin:0}
 .portrait{grid-column:2;margin:0;position:sticky;top:96px}
 .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;filter:grayscale(1)}
 .portrait figcaption{margin-top:14px;display:flex;flex-direction:column;gap:2px}
@@ -180,6 +178,6 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink);border-color:var(--accen
 .pillar.done .tags li{transition-delay:0s}
 @media (prefers-reduced-motion:reduce){
   .hero h1 .wi,.pillar .tags li{opacity:1;animation:none;transform:none;transition:none}
-  .link:hover,.bio-text a:hover{animation:none}
+  .link:hover{animation:none}
   .scroll{animation:none}.hero::before{display:none}.feature-img::after{animation:none;opacity:.6}.feature-img img{translate:none}
 }
