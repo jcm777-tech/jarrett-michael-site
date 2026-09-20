@@ -1,4 +1,10 @@
-# Coming soon: show the holding page at the home address until the full site is ready.
-# Delete this file to make the real index.html live.
-/            /coming-soon.html   200!
-/index.html  /coming-soon.html   200!
+# Coming soon: show the holding page for every page until the full site is ready.
+# Delete this file to make the real site live.
+/                /coming-soon.html   200!
+/index.html      /coming-soon.html   200!
+/about           /coming-soon.html   200!
+/about.html      /coming-soon.html   200!
+/work            /coming-soon.html   200!
+/work.html       /coming-soon.html   200!
+/writing         /coming-soon.html   200!
+/writing.html    /coming-soon.html   200!
