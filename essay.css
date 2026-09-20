@@ -9,7 +9,7 @@
 .essay-hero{margin:clamp(8px,2vw,24px) auto clamp(44px,7vw,80px)}
 .essay-hero img{display:block;width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
 .essay-hero figcaption,.essay figure figcaption{margin-top:12px;font-size:.78rem;color:var(--dim);line-height:1.5}
-.essay{max-width:calc(680px + 2*var(--pad));margin:0 auto;padding:0 var(--pad) 40px;font-size:1.125rem;line-height:1.85;color:#c4c4bf}
+.essay{max-width:calc(860px + 2*var(--pad));margin:0 auto;padding:0 var(--pad) 40px;font-size:1.15rem;line-height:1.85;color:#c4c4bf}
 .essay p{margin:0 0 1.55em}
 .essay .lead-in{font-size:1.32rem;line-height:1.7;color:var(--ink);font-weight:300}
 .essay h2{font-size:clamp(1.6rem,3.4vw,2.05rem);line-height:1.2;margin:2.4em 0 .7em;color:var(--ink)}
@@ -38,7 +38,7 @@
 .notes h2{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500;margin:0 0 1em}
 .notes ol{padding-left:1.2em;margin:0}
 .notes li{margin:0 0 .7em}
-.essay-end{max-width:calc(680px + 2*var(--pad));margin:0 auto;padding:0 var(--pad)}
+.essay-end{max-width:calc(860px + 2*var(--pad));margin:0 auto;padding:0 var(--pad)}
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.85rem;color:var(--muted)}
 .share button{font:inherit;color:var(--accent);background:none;border:0;padding:0;cursor:pointer}
 .author{display:flex;gap:22px;align-items:center;margin:44px 0;padding:28px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
@@ -49,5 +49,5 @@
 .more{max-width:var(--max);margin:0 auto;padding:clamp(40px,7vw,80px) var(--pad) 20px}
 .more .cards{grid-template-columns:repeat(2,1fr)}
 @media (max-width:640px){.author{flex-direction:column;align-items:flex-start}.more .cards{grid-template-columns:1fr}.essay{font-size:1.05rem}}
-@media (min-width:1000px){.essay figure.wide{margin-left:-90px;margin-right:-90px}}
+@media (min-width:1000px){.essay figure.wide{margin-left:-60px;margin-right:-60px}}
 @media (prefers-reduced-motion:reduce){.essay-progress{transition:none}}
