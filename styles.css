@@ -235,3 +235,14 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink);border-color:var(--accen
 
 /* about page: hide anchor pills on mobile */
 @media (max-width:820px){.subnav{display:none}}
+
+/* non-interactive pill (unfilled), e.g. "Coming Soon" */
+.btn--static{background:transparent;color:var(--accent);cursor:default;pointer-events:none;user-select:none;-webkit-user-select:none;transition:none}
+
+/* work page: static "Coming Soon" pills */
+.card-cta{margin-top:auto;padding-top:20px}
+.card-cta .btn--static{display:inline-block}
+.proj-text .btn--static{margin-top:20px}
+.proj-card--static{cursor:default}
+.proj-card--static:hover{border-color:var(--line);transform:none}
+.proj-card--static:hover .proj-img img{transform:none}
