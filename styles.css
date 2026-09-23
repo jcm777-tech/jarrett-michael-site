@@ -232,3 +232,6 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink);border-color:var(--accen
   .proj-img--bridg img{object-position:50% 45%}
 }
 @media (prefers-reduced-motion:reduce){.proj-img--glow::after{animation:none;opacity:.6}.proj-img img{transition:none}}
+
+/* about page: hide anchor pills on mobile */
+@media (max-width:820px){.subnav{display:none}}
