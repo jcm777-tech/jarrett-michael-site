@@ -241,6 +241,7 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink);border-color:var(--accen
 
 /* work page: static "Coming Soon" pills */
 .card-cta{margin-top:auto;padding-top:20px}
+
 .card-cta .btn--static{display:inline-block}
 .proj-text .btn--static{margin-top:20px}
 .proj-card--static{cursor:default}
@@ -253,6 +254,7 @@ article.card h3{font-size:1.5rem;text-wrap:balance}
 /* work page: UX case study cards with image fading into the card surface */
 .card--img{position:relative;isolation:isolate;overflow:hidden;padding-top:clamp(200px,20vw,260px)}
 .card--img>*:not(.card-bg){position:relative;z-index:1}
+.card--img .card-hit{position:absolute;inset:0;z-index:5}
 .card-bg{position:absolute;top:0;left:0;right:0;height:clamp(300px,29vw,370px);z-index:0;pointer-events:none}
 .card-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;filter:brightness(.8) contrast(1.02);-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 28%,rgba(0,0,0,.7) 48%,rgba(0,0,0,.32) 66%,rgba(0,0,0,.1) 82%,transparent 96%);mask-image:linear-gradient(to bottom,#000 0,#000 28%,rgba(0,0,0,.7) 48%,rgba(0,0,0,.32) 66%,rgba(0,0,0,.1) 82%,transparent 96%)}
 .card-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,6,6,.04) 0,rgba(6,6,6,.14) 40%,rgba(14,14,15,.62) 78%,rgba(14,14,15,1) 100%)}
